@@ -4,8 +4,11 @@ server:
 spring:
   application:
     name: config
+  # 配置存储于文件夹中
+  profiles:
+    active: native
   cloud:
     config:
       server:
         git:
-          uri: file://${user.dir}/config-repo
+          uri: file://${user.dir}/config-repo/config
